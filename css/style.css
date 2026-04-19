@@ -524,16 +524,91 @@ nav ul li a:hover { color: var(--accent); }
 }
 .location-item i { color: var(--accent); }
 
-/* Comparison Table */
-.comparison { background: var(--bg-light); }
-.table-wrapper { overflow-x: auto; margin-top: 40px; }
-table { width: 100%; border-collapse: collapse; background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); }
-th, td { padding: 25px; text-align: left; border-bottom: 1px solid #eee; }
-th { background: var(--primary); color: var(--white); font-weight: 700; }
-th:nth-child(2) { background: var(--accent); }
-td:first-child { font-weight: 600; color: var(--primary); }
-td i.fa-check { color: #2ecc71; }
-td i.fa-times { color: #e74c3c; }
+/* Comparison Section Styling */
+.comparison { padding: 100px 0; background: #fff; }
+
+.comparison-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.comparison-header .playfair-title { margin-bottom: 0; }
+
+.comparison-header .header-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-outline-pill {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-outline-pill:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.comparison-table thead th {
+    background: var(--primary); /* Navy Blue */
+    color: #fff !important;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.comparison-table thead th:nth-child(2),
+.comparison-table thead th:nth-child(3) {
+    text-align: center;
+    width: 35%;
+}
+
+.comparison-table tbody td {
+    padding: 25px 20px;
+    border-bottom: 1px solid #efefef;
+    vertical-align: middle;
+    font-size: 1rem;
+    color: #333;
+}
+
+.comparison-table tbody tr:last-child td { border-bottom: none; }
+
+.comparison-table tbody td strong {
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.comparison-table .fa-check-square {
+    color: #4CAF50;
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .comparison-header { flex-direction: column; text-align: center; }
+    .table-wrapper { overflow-x: auto; margin-top: 20px; }
+    .comparison-table { min-width: 800px; }
+}
 
 /* Testimonials Carousel Section */
 .testimonials { padding: 100px 0; background: var(--bg-light); border-top: 1px solid #eee; overflow: hidden; }
