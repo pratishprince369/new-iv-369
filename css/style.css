@@ -118,27 +118,67 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
     width: 100%;
 }
 
 .logo-wrapper { display: flex; align-items: center; gap: 12px; }
-.logo-wrapper span { font-size: 1.8rem; font-weight: 600; color: var(--primary); letter-spacing: -0.5px; }
+.logo-wrapper span { 
+    font-size: 1.6rem; 
+    font-weight: 700; 
+    color: var(--primary); 
+    letter-spacing: -0.5px;
+    font-family: var(--font-main);
+    white-space: nowrap;
+}
 .logo img { height: 45px; }
 
-nav ul { display: flex; gap: 25px; }
-nav ul li a { font-weight: 500; color: var(--text-dark); }
+nav ul { display: flex; gap: 20px; }
+nav ul li a { 
+    font-weight: 500; 
+    color: var(--primary); 
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
 nav ul li a:hover { color: var(--accent); }
 
-.nav-actions { display: flex; align-items: center; gap: 30px; }
-.header-phone { font-weight: 500; color: var(--primary); display: flex; align-items: center; gap: 10px; font-size: 1rem; }
+.nav-chevron {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: rotate(45deg);
+    margin-bottom: 3px;
+    opacity: 0.7;
+}
+
+.nav-actions { display: flex; align-items: center; gap: 25px; flex-shrink: 0; }
+.header-phone { 
+    font-weight: 600; 
+    color: var(--primary); 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    font-size: 0.95rem; 
+    border-bottom: 1.2px solid rgba(0, 26, 87, 0.2);
+    padding-bottom: 2px;
+    white-space: nowrap;
+}
+
+.header-phone i { font-size: 1.2rem; }
 
 .btn-navy-pill {
     background: var(--primary);
     color: var(--white);
-    padding: 10px 30px;
+    padding: 10px 25px;
     border-radius: 50px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.95rem;
+    white-space: nowrap;
 }
 
 .btn-navy-pill:hover {
@@ -495,12 +535,81 @@ td:first-child { font-weight: 600; color: var(--primary); }
 td i.fa-check { color: #2ecc71; }
 td i.fa-times { color: #e74c3c; }
 
-/* Review Cards */
-.reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.review-card { background: var(--white); padding: 30px; border-radius: 20px; box-shadow: var(--shadow); border: 1px solid #eee; }
-.stars { color: #f1c40f; margin-bottom: 15px; font-size: 0.8rem; }
-.reviewer { display: flex; align-items: center; gap: 15px; margin-top: 20px; }
-.reviewer-img { width: 50px; height: 50px; border-radius: 50%; background: var(--bg-light); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--accent); }
+/* Testimonials Carousel Section */
+.testimonials { padding: 100px 0; background: var(--bg-light); border-top: 1px solid #eee; overflow: hidden; }
+
+.reviews-wrapper {
+    position: relative;
+    margin-top: 50px;
+    padding: 20px 0;
+}
+
+.reviews-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.reviews-track {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.testimonials .review-card {
+    min-width: calc(33.333% - 20px); /* Show 3 cards on desktop */
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition);
+}
+
+.review-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+
+.stars { color: #FFB400; font-size: 0.9rem; margin-bottom: 20px; display: flex; gap: 3px; }
+
+.review-card p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.reviewer { display: flex; align-items: center; gap: 15px; }
+.reviewer-img {
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.reviewer-info strong { display: block; font-size: 1rem; color: #1a1a1a; margin-bottom: 2px; }
+.reviewer-info span { font-size: 0.85rem; color: #777; }
+
+/* Reuse carousel buttons from treatments but specific IDs */
+#rev-prev-btn { left: -30px; }
+#rev-next-btn { right: -30px; }
+
+@media (max-width: 992px) {
+    .testimonials .review-card { min-width: calc(50% - 15px); }
+    #rev-prev-btn { left: -10px; }
+    #rev-next-btn { right: -10px; }
+}
+
+@media (max-width: 576px) {
+    .testimonials .review-card { min-width: 85%; }
+    #rev-prev-btn, #rev-next-btn { display: none; }
+}
 
 /* Memberships / Group Cards */
 .promo-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px; }

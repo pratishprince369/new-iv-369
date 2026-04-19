@@ -76,6 +76,62 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('resize', updateCarousel);
     }
 
+    // --- Testimonials Carousel Logic ---
+    const revTrack = document.getElementById('reviews-track');
+    const revPrevBtn = document.getElementById('rev-prev-btn');
+    const revNextBtn = document.getElementById('rev-next-btn');
+    
+    if (revTrack) {
+        let revIndex = 0;
+        const revCards = revTrack.querySelectorAll('.review-card');
+        const revCount = revCards.length;
+        
+        const getVisibleReviews = () => {
+            if (window.innerWidth > 992) return 3;
+            if (window.innerWidth > 576) return 2;
+            return 1;
+        };
+
+        const updateRevCarousel = () => {
+            const gap = 30;
+            const cardWidth = revCards[0].offsetWidth;
+            const moveAmount = (cardWidth + gap) * revIndex;
+            revTrack.style.transform = `translateX(-${moveAmount}px)`;
+        };
+
+        const moveRevNext = () => {
+            const visible = getVisibleReviews();
+            if (revIndex < revCount - visible) {
+                revIndex++;
+            } else {
+                revIndex = 0;
+            }
+            updateRevCarousel();
+        };
+
+        const moveRevPrev = () => {
+            if (revIndex > 0) {
+                revIndex--;
+            } else {
+                const visible = getVisibleReviews();
+                revIndex = revCount - visible;
+            }
+            updateRevCarousel();
+        };
+
+        if (revNextBtn) revNextBtn.addEventListener('click', moveRevNext);
+        if (revPrevBtn) revPrevBtn.addEventListener('click', moveRevPrev);
+
+        let revInterval = setInterval(moveRevNext, 6000); // Slightly slower for reading reviews
+
+        revTrack.closest('.reviews-wrapper').addEventListener('mouseenter', () => clearInterval(revInterval));
+        revTrack.closest('.reviews-wrapper').addEventListener('mouseleave', () => {
+            revInterval = setInterval(moveRevNext, 6000);
+        });
+
+        window.addEventListener('resize', updateRevCarousel);
+    }
+
     // FAQ Accordion
     const accordionItems = document.querySelectorAll('.accordion-item');
     

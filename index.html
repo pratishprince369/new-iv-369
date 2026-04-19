@@ -21,25 +21,33 @@
     <header>
         <div class="container">
             <a href="#" class="logo">
-                <img src="https://mobileivdrip.com/wp-content/uploads/2025/03/MIVD-Logo-Primary-H.svg" alt="Mobile IV Drip">
+                <div class="logo-wrapper">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" stroke="#001A57" stroke-width="1.8"/>
+                        <path d="M11 20H29M20 11V29M14 14L26 26M26 14L14 26" stroke="#001A57" stroke-width="1.2" opacity="0.8"/>
+                        <path d="M20 11L11 20L20 29L29 20L20 11Z" stroke="#001A57" stroke-width="1.2"/>
+                    </svg>
+                    <span>Mobile IV Drip</span>
+                </div>
             </a>
             
             <nav id="main-nav">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#treatments">Treatments</a></li>
-                    <li><a href="#locations">Locations</a></li>
-                    <li><a href="#memberships">Memberships</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#about">About <span class="nav-chevron"></span></a></li>
+                    <li><a href="#locations">Locations <span class="nav-chevron"></span></a></li>
+                    <li><a href="#treatments">IV Treatments <span class="nav-chevron"></span></a></li>
+                    <li><a href="#memberships">Memberships <span class="nav-chevron"></span></a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             
             <div class="nav-actions">
-                <a href="tel:6467093698" class="phone-link">
-                    <i class="fas fa-phone"></i> (646) 709-3698
+                <a href="tel:6467093698" class="header-phone">
+                    <i class="fa-solid fa-phone-volume"></i> Call Us
                 </a>
-                <a href="#" class="btn btn-gold">Book Now</a>
+                <a href="#" class="btn btn-navy-pill">Appointment</a>
                 <div class="hamburger" id="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -238,47 +246,55 @@
             </div>
         </section>
 
-        <!-- Testimonials -->
+        <!-- Testimonials (Carousel) -->
         <section class="testimonials">
             <div class="container">
                 <div class="section-header text-center">
                     <span class="tagline-gold">Testimonials</span>
-                    <h2>Spike Five Stars</h2>
+                    <h2 class="playfair-title">Solid Five Stars</h2>
                 </div>
-                <div class="reviews-grid">
-                    <div class="review-card">
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p>"Indy was awesome, highly recommend! Felling much better already."</p>
-                        <div class="reviewer">
-                            <div class="reviewer-img">EW</div>
-                            <div class="reviewer-info">
-                                <strong>Erika Wallace</strong>
-                                <span style="font-size: 0.8rem; color: #666;">Verified Customer</span>
+                
+                <div class="reviews-wrapper">
+                    <button class="carousel-btn prev" id="rev-prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <div class="reviews-container">
+                        <div class="reviews-track" id="reviews-track">
+                            <div class="review-card">
+                                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                <p>"Indy was awesome, highly recommend! Feeling much better already."</p>
+                                <div class="reviewer">
+                                    <div class="reviewer-img">EW</div>
+                                    <div class="reviewer-info">
+                                        <strong>Erika Wallace</strong>
+                                        <span>Verified Customer</span>
+                                    </div>
+                                </div>
                             </div>
+                            <div class="review-card">
+                                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                <p>"Great experience. I’ve used them many times. My nurse Indy showed up promptly and got me all taken care of."</p>
+                                <div class="reviewer">
+                                    <div class="reviewer-img">J</div>
+                                    <div class="reviewer-info">
+                                        <strong>Jay</strong>
+                                        <span>Verified Customer</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-card">
+                                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                <p>"Indy was amazing and knowledgeable. Very patient and answered all my questions. Highly professional!"</p>
+                                <div class="reviewer">
+                                    <div class="reviewer-img">DM</div>
+                                    <div class="reviewer-info">
+                                        <strong>Deborah Massey</strong>
+                                        <span>Verified Customer</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Duplicate for smoother loop if needed, or handled via JS -->
                         </div>
                     </div>
-                    <div class="review-card">
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p>"Great experience. I’ve used them many times. My nurse Indy showed up promptly and got me all taken care of."</p>
-                        <div class="reviewer">
-                            <div class="reviewer-img">J</div>
-                            <div class="reviewer-info">
-                                <strong>Jay</strong>
-                                <span style="font-size: 0.8rem; color: #666;">Verified Customer</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p>"Indy was amazing and knowledgeable. Very patient and answered all my questions. Highly professional!"</p>
-                        <div class="reviewer">
-                            <div class="reviewer-img">DM</div>
-                            <div class="reviewer-info">
-                                <strong>Deborah Massey</strong>
-                                <span style="font-size: 0.8rem; color: #666;">Verified Customer</span>
-                            </div>
-                        </div>
-                    </div>
+                    <button class="carousel-btn next" id="rev-next-btn"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
         </section>
