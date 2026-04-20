@@ -7,7 +7,7 @@
 
 :root {
     --primary: #1a6b4c; /* Forest Green */
-    --primary-dark: #124a35;
+    --primary-dark: #0b3d2e;
     --primary-light: #258561;
     --accent: #c8a96e; /* Warm Gold */
     --accent-hover: #b5965e;
@@ -16,11 +16,11 @@
     --text-muted: #666;
     --bg-light: #F8F9FA;
     --white: #ffffff;
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     --container-width: 1200px;
     --header-height: 80px;
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.1);
+    --shadow: 0 15px 45px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 25px 50px rgba(26, 107, 76, 0.15);
 }
 
 /* Global Reset */
@@ -37,9 +37,10 @@ html {
 body {
     font-family: 'Outfit', sans-serif;
     color: var(--text-dark);
-    line-height: 1.6;
+    line-height: 1.8;
     overflow-x: hidden;
     background-color: var(--white);
+    -webkit-font-smoothing: antialiased;
 }
 
 ul { list-style: none; }
@@ -1481,24 +1482,32 @@ footer { background: #0c3325; color: var(--white); padding: 80px 0 30px; }
 
 .product-card-single {
     background: var(--white);
-    border-radius: 20px;
+    border-radius: 25px;
     overflow: hidden;
-    box-shadow: var(--shadow);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.05);
     transition: var(--transition);
-    border: 1px solid #f0f0f0;
+    border: 1px solid rgba(26, 107, 76, 0.05);
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .product-card-single:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-hover);
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(26, 107, 76, 0.15);
 }
 
 .product-card-single img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: 320px;
+    object-fit: contain;
+    padding: 20px;
+    background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+    transition: var(--transition);
+}
+
+.product-card-single:hover img {
+    transform: scale(1.05);
 }
 
 .card-content {
@@ -1558,10 +1567,11 @@ footer { background: #0c3325; color: var(--white); padding: 80px 0 30px; }
 }
 
 .premium-shot-card .price {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.6rem;
+    font-weight: 800;
     color: var(--accent);
     margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
 }
 
 .faq-teaser {
