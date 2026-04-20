@@ -58,8 +58,8 @@ section { padding: 100px 0; }
 /* Typography */
 h1, h2, h3, h4, h5 { font-weight: 700; line-height: 1.2; }
 h1 { font-size: clamp(3rem, 6vw, 4.5rem); margin-bottom: 20px; }
-h2 { font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 20px; }
-p { margin-bottom: 20px; font-size: 1.1rem; }
+h2 { font-size: clamp(1.75rem, 3.5vw, 2.25rem); margin-bottom: 15px; }
+p { margin-bottom: 20px; font-size: 1rem; color: var(--text-muted); line-height: 1.8; }
 
 .tagline-gold {
     color: var(--accent);
@@ -1482,14 +1482,31 @@ footer { background: #0c3325; color: var(--white); padding: 80px 0 30px; }
 
 .product-card-single {
     background: var(--white);
-    border-radius: 25px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 15px 45px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
     transition: var(--transition);
-    border: 1px solid rgba(26, 107, 76, 0.05);
+    border: 1px solid rgba(26, 107, 76, 0.08);
     display: flex;
     flex-direction: column;
     position: relative;
+    height: 100%;
+}
+
+.product-card-single h2, 
+.product-card-single h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--primary);
+    letter-spacing: -0.02em;
+}
+
+.product-card-single .price {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 15px;
 }
 
 .product-card-single:hover {
@@ -1517,11 +1534,13 @@ footer { background: #0c3325; color: var(--white); padding: 80px 0 30px; }
 
 .badge {
     display: inline-block;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.65rem;
     font-weight: 700;
-    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
 }
 
 .urgency-badge {
