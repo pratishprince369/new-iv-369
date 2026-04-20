@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IV Drip Therapy Menu | Revive IV Hydration</title>
+    <meta name="description" content="Explore our comprehensive IV Drip therapy menu. From Myers Cocktail to Liquid Gold, choose the right hydration treatment for your wellness needs.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-wrapper">
+                    <img src="assets/revive-iv-logo-logo.png" alt="Revive IV Hydration Logo" style="height: 45px; width: auto;">
+                    <span>Revive IV Hydration</span>
+                </div>
+            </a>
+            
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="iv-drips.html" class="active">IV DRIPS</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="index.html#faq">FAQS</a></li>
+                    <li><a href="index.html#reviews">REVIEWS</a></li>
+                    <li><a href="index.html#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="tel:6467093698" class="header-phone">
+                    <i class="fa-solid fa-phone-volume"></i> Call Us
+                </a>
+                <a href="#" class="btn btn-navy-pill">Appointment</a>
+                <div class="hamburger" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="about-hero" style="padding-bottom: 20px; background: linear-gradient(rgba(11, 61, 46, 0.9), rgba(26, 107, 76, 0.95)), url('https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1920'); background-size: cover; background-position: center;">
+            <div class="container text-center">
+                <h1 class="product-title animate-up" style="color: white; margin-top: 40px;">IV Drip Therapy Menu</h1>
+                <p class="section-desc animate-up" style="color: rgba(255,255,255,0.9); margin-top: 20px;">Rehydrate, replenish, and recover with our specialized IV therapies delivered directly to you.</p>
+            </div>
+        </section>
+
+        <!-- Category Filter -->
+        <div class="filter-container container animate-up">
+            <button class="filter-btn active" data-filter="all">All Treatments</button>
+            <button class="filter-btn" data-filter="iv-drips">IV Drips</button>
+            <button class="filter-btn" data-filter="im-shots">IM Shots</button>
+            <button class="filter-btn" data-filter="weight-loss">Weight Loss</button>
+        </div>
+
+        <!-- Featured Product Section -->
+        <section class="featured-product section-padding bg-white" data-category="iv-drips">
+            <div class="container">
+                <!-- Premium Trust Badges -->
+                <div class="trust-badges-container animate-up" style="margin-bottom: 50px;">
+                    <div class="trust-badge-item">
+                        <div class="trust-icon-wrapper"><i class="fa-solid fa-user-nurse"></i></div>
+                        <div>
+                            <h4>Licensed RNs</h4>
+                            <p>Administered by experts</p>
+                        </div>
+                    </div>
+                    <div class="trust-badge-item">
+                        <div class="trust-icon-wrapper"><i class="fa-solid fa-prescription-bottle-medical"></i></div>
+                        <div>
+                            <h4>FDA-Approved</h4>
+                            <p>Premium pharmacy sourced</p>
+                        </div>
+                    </div>
+                    <div class="trust-badge-item">
+                        <div class="trust-icon-wrapper"><i class="fa-solid fa-stethoscope"></i></div>
+                        <div>
+                            <h4>Medical Director</h4>
+                            <p>Complete safety oversight</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-container animate-up">
+                    <div class="product-image">
+                        <img src="https://res.cloudinary.com/dpcidympa/image/upload/q_auto/f_auto/v1776114758/final-iv-image_zwnase.png" alt="Custom Drips">
+                    </div>
+                    <div class="product-details">
+                        <span class="badge" style="background:#f1f5f9; color:#475569;">MOST POPULAR</span>
+                        <h2 class="playfair-title" style="margin-bottom: 15px;">Custom Drips</h2>
+                        <div class="price" style="font-size: 2.2rem; font-weight: 700; color: var(--primary); margin-bottom: 20px;"><sup>$</sup>175 <span style="font-size: 1.1rem; font-weight: 400; color: var(--text-muted);">All-Inclusive</span></div>
+                        <p class="product-desc" style="margin-bottom: 30px;">Optimize wellness with our most comprehensive IV blend. Tailored to your body's unique requirements.</p>
+                        <ul class="product-features" style="list-style: none; padding: 0; margin-bottom: 40px;">
+                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 15px;"><i class="fa-solid fa-circle-check" style="color: var(--accent); font-size: 1.2rem; margin-top: 3px;"></i> B-Complex | Vitamin B12 | Vitamin C | Lipostat (MIC)</li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 15px;"><i class="fa-solid fa-circle-check" style="color: var(--accent); font-size: 1.2rem; margin-top: 3px;"></i> Magnesium | Glutathione | Biotin | Zinc</li>
+                        </ul>
+                        <a href="https://square.link/u/V4TofUel" class="btn btn-navy-pill" style="padding: 18px 45px; font-size: 1.1rem;">Book Treatment</a>
+                        <div class="urgency-badge" style="margin-top: 25px;"><i class="fa-solid fa-fire"></i> High Demand: 45+ sessions booked this week</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Guide -->
+        <section class="section-padding bg-light" data-category="iv-drips">
+            <div class="container">
+                <div class="guide-container animate-up">
+                    <div class="text-center" style="margin-bottom: 50px;">
+                        <h2 class="playfair-title" style="color: white; font-size: 2.5rem; margin-bottom: 15px;">Which Drip Is Right For Me?</h2>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Not sure what to choose? Explore our quick cheat-sheet for your specific health and wellness goals.</p>
+                    </div>
+                    <div class="guide-grid">
+                        <a href="#myers-cocktail" class="guide-item">
+                            <div class="guide-icon"><i class="fa-solid fa-bolt"></i></div>
+                            <span class="trigger">Need energy?</span>
+                            <span class="solution">Myers Cocktail</span>
+                        </a>
+                        <a href="#liquid-gold" class="guide-item">
+                            <div class="guide-icon"><i class="fa-solid fa-wine-glass"></i></div>
+                            <span class="trigger">Drank too much?</span>
+                            <span class="solution">Liquid Gold</span>
+                        </a>
+                        <a href="#beautify" class="guide-item">
+                            <div class="guide-icon"><i class="fa-solid fa-spa"></i></div>
+                            <span class="trigger">Big event soon?</span>
+                            <span class="solution">Beautify</span>
+                        </a>
+                        <a href="#revive-defense" class="guide-item">
+                            <div class="guide-icon"><i class="fa-solid fa-shield-virus"></i></div>
+                            <span class="trigger">Feeling sick?</span>
+                            <span class="solution">Revive Defense</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Grid (Full Menu) -->
+        <section class="section-padding" data-category="iv-drips">
+            <div class="container">
+                <div class="grid-3 animate-up">
+                    <!-- Myers Cocktail -->
+                    <div class="product-card-single" id="myers-cocktail">
+                        <img src="https://res.cloudinary.com/dpcidympa/image/upload/v1776211331/all-in-one_aqly3o.jpg" alt="Myers Cocktail">
+                        <div class="card-content">
+                            <span class="badge" style="background:#e0f2fe; color:#0369a1;">ALL-INCLUSIVE</span>
+                            <h3 class="playfair-title">Myers Cocktail</h3>
+                            <div class="price" style="font-size: 1.8rem; margin: 15px 0;">$399</div>
+                            <p style="color: var(--text-muted);">The gold standard of IV therapy. Hydrate, restore, and optimize your overall wellness.</p>
+                            <div class="ingredients-list" style="margin: 20px 0; padding-top: 15px; border-top: 1px dashed #eee;">
+                                <p style="font-size: 0.75rem; font-weight: 700; color: var(--primary); text-transform: uppercase;">Key Ingredients:</p>
+                                <p style="font-size: 0.85rem; color: var(--text-muted);">Vitamin C, B Complex, B12, Magnesium, Calcium Gluconate, IV Base Fluid</p>
+                            </div>
+                            <a href="https://square.link/u/uxhKANzG" class="btn btn-navy-pill w-100">Book Treatment</a>
+                            <div class="urgency-badge"><i class="fa-solid fa-fire"></i> Popular Choice</div>
+                        </div>
+                    </div>
+
+                    <!-- Brain Focus -->
+                    <div class="product-card-single">
+                        <img src="https://res.cloudinary.com/dpcidympa/image/upload/q_auto/f_auto/v1775948552/ivvv-2-removebg-preview_y6jzjn.png" alt="Brain Focus">
+                        <div class="card-content">
+                            <span class="badge" style="background:#fef08a; color:#854d0e;">TARGETED</span>
+                            <h3 class="playfair-title">Brain Focus</h3>
+                            <div class="price" style="font-size: 1.8rem; margin: 15px 0;">$400</div>
+                            <p style="color: var(--text-muted);">Enhance cognitive function, mental clarity, and power through your day.</p>
+                            <div class="ingredients-list" style="margin: 20px 0; padding-top: 15px; border-top: 1px dashed #eee;">
+                                <p style="font-size: 0.75rem; font-weight: 700; color: var(--primary); text-transform: uppercase;">Key Ingredients:</p>
+                                <p style="font-size: 0.85rem; color: var(--text-muted);">B-Complex, B12, Magnesium, Alpha Lipoic Acid, Taurine, Glutathione</p>
+                            </div>
+                            <a href="https://square.link/u/PByJKXAp" class="btn btn-navy-pill w-100">Book Treatment</a>
+                        </div>
+                    </div>
+
+                    <!-- Revive Calm -->
+                    <div class="product-card-single">
+                        <img src="https://res.cloudinary.com/dpcidympa/image/upload/q_auto/f_auto/v1775948552/ivvv-4-removebg-preview_w67nzx.png" alt="Revive Calm">
+                        <div class="card-content">
+                            <span class="badge" style="background:#e0f2fe; color:#0369a1;">RECOVERY</span>
+                            <h3 class="playfair-title">Revive Calm</h3>
+                            <div class="price" style="font-size: 1.8rem; margin: 15px 0;">$279</div>
+                            <p style="color: var(--text-muted);">Replenish essential vitamins and soothe your mind with our stress-relief blend.</p>
+                            <div class="ingredients-list" style="margin: 20px 0; padding-top: 15px; border-top: 1px dashed #eee;">
+                                <p style="font-size: 0.75rem; font-weight: 700; color: var(--primary); text-transform: uppercase;">Key Ingredients:</p>
+                                <p style="font-size: 0.85rem; color: var(--text-muted);">Magnesium Sulfate (High Dose), B-Complex, Vitamin C, Taurine, Glycine</p>
+                            </div>
+                            <a href="https://square.link/u/4GJCGg8t" class="btn btn-navy-pill w-100">Book Treatment</a>
+                        </div>
+                    </div>
+
+                    <!-- Revive Defense -->
+                    <div class="product-card-single" id="revive-defense">
+                        <img src="https://res.cloudinary.com/dpcidympa/image/upload/q_auto/f_auto/v1775948553/ivvv-3-removebg-preview_umoxbk.png" alt="Revive Defense">
+                        <div class="card-content">
+                            <span class="badge" style="background:rgba(26,107,76,0.1); color:var(--primary);">IMMUNITY</span>
+                            <h3 class="playfair-title">Revive Defense</h3>
+                            <div class="price" style="font-size: 1.8rem; margin: 15px 0;">$299</div>
+                            <p style="color: var(--text-muted);">Strengthen your immune system and fight off illness with hospital-grade nutrients.</p>
+                            <div class="ingredients-list" style="margin: 20px 0; padding-top: 15px; border-top: 1px dashed #eee;">
+                                <p style="font-size: 0.75rem; font-weight: 700; color: var(--primary); text-transform: uppercase;">Key Ingredients:</p>
+                                <p style="font-size: 0.85rem; color: var(--text-muted);">High Dose Vitamin C, Zinc, B-Complex, B12, Glutathione, Selenium</p>
+                            </div>
+                            <a href="https://square.link/u/UyC1nJok" class="btn btn-navy-pill w-100">Book Treatment</a>
+                        </div>
+                    </div>
+
+                    <!-- Beautify -->
+                    <div class="product-card-single" id="beautify">
+                        <img src="https://res.cloudinary.com/dpcidympa/image/upload/q_auto/f_auto/v1775948552/ivvv-5-removebg-preview_fbzea1.png" alt="Beautify">
+                        <div class="card-content">
+                            <span class="badge" style="background:#fce7f3; color:#be185d;">BEAUTY</span>
+                            <h3 class="playfair-title">Beautify</h3>
+                            <div class="price" style="font-size: 1.8rem; margin: 15px 0;">$299</div>
+                            <p style="color: var(--text-muted);">Promote radiant skin, healthy hair, and strong nails with our glow-inducing therapy.</p>
+                            <div class="ingredients-list" style="margin: 20px 0; padding-top: 15px; border-top: 1px dashed #eee;">
+                                <p style="font-size: 0.75rem; font-weight: 700; color: var(--primary); text-transform: uppercase;">Key Ingredients:</p>
+                                <p style="font-size: 0.85rem; color: var(--text-muted);">Glutathione, Vitamin C, Biotin, B-Complex, Zinc, Alpha Lipoic Acid</p>
+                            </div>
+                            <a href="https://square.link/u/Ln9ttxEl" class="btn btn-navy-pill w-100">Book Treatment</a>
+                        </div>
+                    </div>
+
+                    <!-- Liquid Gold -->
+                    <div class="product-card-single" id="liquid-gold">
+                        <img src="https://res.cloudinary.com/dpcidympa/image/upload/q_auto/f_auto/v1775948553/ivvv-1-removebg-preview_haxd9b.png" alt="Liquid Gold">
+                        <div class="card-content">
+                            <span class="badge" style="background:#fef08a; color:#a16207;">HANGOVER CURE</span>
+                            <h3 class="playfair-title">Liquid Gold</h3>
+                            <div class="price" style="font-size: 1.8rem; margin: 15px 0;">$259</div>
+                            <p style="color: var(--text-muted);">The ultimate rehydration blend designed for rapid recovery from hangovers.</p>
+                            <div class="ingredients-list" style="margin: 20px 0; padding-top: 15px; border-top: 1px dashed #eee;">
+                                <p style="font-size: 0.75rem; font-weight: 700; color: var(--primary); text-transform: uppercase;">Key Ingredients:</p>
+                                <p style="font-size: 0.85rem; color: var(--text-muted);">B-Complex, B12, Vitamin C, Magnesium, Calcium, Zinc, Electrolytes</p>
+                            </div>
+                            <a href="https://square.link/u/PZKcRCjW" class="btn btn-navy-pill w-100">Book Treatment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shot Bar -->
+        <section class="section-padding bg-light" data-category="im-shots" style="border-top: 1px solid #eee;">
+            <div class="container text-center">
+                <span class="tagline-gold animate-up">Add-Ons</span>
+                <h2 class="playfair-title animate-up" style="font-size: 3rem;">The Shot Bar</h2>
+                <p class="animate-up" style="margin-bottom: 50px;">Add to any IV drip • Quick 5-minute injections • Wellness made easy</p>
+                
+                <div class="shot-bar-grid animate-up">
+                    <div class="premium-shot-card">
+                        <img src="https://res.cloudinary.com/dpcidympa/image/upload/v1776218208/vitamin_b-12_nvw8th.png" alt="B12" class="shot-product-image">
+                        <h3>Vitamin B12</h3>
+                        <div class="price">$35</div>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Instant energy boost.</p>
+                        <a href="https://square.link/u/zLDBSZqG" class="btn btn-outline-dark w-100">Book Shot</a>
+                    </div>
+                    <div class="premium-shot-card">
+                        <img src="https://res.cloudinary.com/dpcidympa/image/upload/v1776218208/vitamin-d_zsuzaw.png" alt="Vitamin D" class="shot-product-image">
+                        <h3>Vitamin D</h3>
+                        <div class="price">$45</div>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Immunity & bone health.</p>
+                        <a href="https://square.link/u/RrPjPYUw" class="btn btn-outline-dark w-100">Book Shot</a>
+                    </div>
+                    <div class="premium-shot-card">
+                        <img src="https://res.cloudinary.com/dpcidympa/image/upload/v1776220403/Lipolean_tvb5va.png" alt="Lipolean" class="shot-product-image">
+                        <h3>Lipolean</h3>
+                        <div class="price">$40</div>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Metabolism support.</p>
+                        <a href="https://square.link/u/CXxvDxs6" class="btn btn-outline-dark w-100">Book Shot</a>
+                    </div>
+                    <div class="premium-shot-card">
+                        <img src="https://res.cloudinary.com/dpcidympa/image/upload/v1776546088/biotin_vzauor-removebg-preview_ondabm.png" alt="Biotin" class="shot-product-image">
+                        <h3>Biotin</h3>
+                        <div class="price">$35</div>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Skin, hair & nails.</p>
+                        <a href="https://square.link/u/ChuGL199" class="btn btn-outline-dark w-100">Book Shot</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weight Loss Section -->
+        <section class="section-padding" data-category="weight-loss">
+            <div class="container text-center">
+                <span class="tagline-gold animate-up">Medical Programs</span>
+                <h2 class="playfair-title animate-up">Revive Weight Loss Injections</h2>
+                <p class="animate-up" style="margin-bottom: 50px;">Customized for your body & goals • Personalised support • Physician overseen</p>
+                
+                <div class="grid-2 animate-up" style="max-width: 900px; margin: 0 auto;">
+                    <div class="product-card-single">
+                        <img src="https://res.cloudinary.com/dpcidympa/image/upload/q_auto/f_auto/v1776218208/Semaglutide_rxmk9p.png" alt="Semaglutide">
+                        <div class="card-content">
+                            <span class="badge" style="background:#bae6fd; color:#0369a1;">WEIGHT LOSS</span>
+                            <h3 class="playfair-title">Semaglutide</h3>
+                            <div class="price" style="font-size: 1.8rem; margin: 15px 0;"><span style="font-size: 0.9rem; font-weight: normal; color: var(--text-muted);">From</span> $199 <span style="font-size: 0.9rem; font-weight: normal; color: var(--text-muted);">/ mo</span></div>
+                            <p style="color: var(--text-muted);">Effective, customized plan for sustainable weight loss success.</p>
+                            <a href="https://square.link/u/XL0onhgR" class="btn btn-navy-pill w-100">Book Treatment</a>
+                        </div>
+                    </div>
+                    <div class="product-card-single">
+                        <img src="https://res.cloudinary.com/dpcidympa/image/upload/v1776218208/Tirzepatide_i5dzac.png" alt="Tirzepatide">
+                        <div class="card-content">
+                            <span class="badge" style="background:#e9d5ff; color:#7e22ce;">WEIGHT LOSS</span>
+                            <h3 class="playfair-title">Tirzepatide</h3>
+                            <div class="price" style="font-size: 1.8rem; margin: 15px 0;"><span style="font-size: 0.9rem; font-weight: normal; color: var(--text-muted);">From</span> $249 <span style="font-size: 0.9rem; font-weight: normal; color: var(--text-muted);">/ mo</span></div>
+                            <p style="color: var(--text-muted);">Advanced dual-action weight management protocol for robust results.</p>
+                            <a href="https://square.link/u/A0Op2rDF" class="btn btn-navy-pill w-100">Book Treatment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ingredients Section -->
+        <section class="section-padding bg-light" data-category="iv-drips">
+            <div class="container text-center animate-up">
+                <h2 class="playfair-title" style="font-size: 2.2rem; color: var(--primary); margin-bottom: 20px;">What's in our IVs?</h2>
+                <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 800px; margin: 0 auto 40px auto;">We believe in 100% transparency. Our medical-grade drips use these premium common ingredients to support optimal wellness.</p>
+                
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; max-width: 900px; margin: 0 auto;">
+                    <span style="background: rgba(200, 169, 110, 0.1); color: var(--accent); padding: 10px 25px; border-radius: 30px; font-weight: 600; font-size: 0.95rem;">Vitamin C</span>
+                    <span style="background: rgba(200, 169, 110, 0.1); color: var(--accent); padding: 10px 25px; border-radius: 30px; font-weight: 600; font-size: 0.95rem;">Vitamin B Complex</span>
+                    <span style="background: rgba(200, 169, 110, 0.1); color: var(--accent); padding: 10px 25px; border-radius: 30px; font-weight: 600; font-size: 0.95rem;">Vitamin B12</span>
+                    <span style="background: rgba(200, 169, 110, 0.1); color: var(--accent); padding: 10px 25px; border-radius: 30px; font-weight: 600; font-size: 0.95rem;">Magnesium</span>
+                    <span style="background: rgba(200, 169, 110, 0.1); color: var(--accent); padding: 10px 25px; border-radius: 30px; font-weight: 600; font-size: 0.95rem;">Zinc</span>
+                    <span style="background: rgba(200, 169, 110, 0.1); color: var(--accent); padding: 10px 25px; border-radius: 30px; font-weight: 600; font-size: 0.95rem;">Glutathione</span>
+                    <span style="background: rgba(200, 169, 110, 0.1); color: var(--accent); padding: 10px 25px; border-radius: 30px; font-weight: 600; font-size: 0.95rem;">Alpha Lipoic Acid</span>
+                    <span style="background: rgba(200, 169, 110, 0.1); color: var(--accent); padding: 10px 25px; border-radius: 30px; font-weight: 600; font-size: 0.95rem;">Biotin</span>
+                    <span style="background: rgba(200, 169, 110, 0.1); color: var(--accent); padding: 10px 25px; border-radius: 30px; font-weight: 600; font-size: 0.95rem;">Amino Acids</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Teaser -->
+        <section class="container animate-up">
+            <div class="faq-teaser">
+                <h2 class="playfair-title" style="color: white; font-size: 2.5rem; margin-bottom: 20px;">Still Have Questions?</h2>
+                <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 30px;">Wondering if it hurts, how long it takes, or which drip is best for you?</p>
+                <a href="index.html#faq" class="btn btn-gold" style="background: white; color: var(--primary);">Read Our FAQs</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container footer-grid">
+            <div class="footer-col brand">
+                <a href="index.html" class="logo">
+                    <img src="assets/revive-iv-logo-logo.png" alt="Revive IV Hydration" style="filter: brightness(0) invert(1); height: 45px; width: auto;">
+                    <span style="color: white; font-weight: 700; font-size: 1.5rem; margin-left: 10px;">Revive IV Hydration</span>
+                </a>
+                <p style="margin-top: 20px; opacity: 0.7;">Premium Revive IV Hydration and hydration services delivered to you. Licensed nurses, clinical excellence, on-demand wellness.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="iv-drips.html" class="active">IV Treatments</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html#locations">Our Locations</a></li>
+                    <li><a href="index.html#faq">FAQs</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="contact-info">
+                    <li><i class="fas fa-phone"></i> (646) 709-3698</li>
+                    <li><i class="fas fa-envelope"></i> hello@reviveiv.io</li>
+                    <li><i class="fas fa-location-dot"></i> NYC & Extended Metro Area</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; 2025 Revive IV Hydration. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mainNav = document.getElementById('main-nav');
+            if(mobileBtn) {
+                mobileBtn.addEventListener('click', () => {
+                    mainNav.classList.toggle('active');
+                });
+            }
+
+            // Filtering Logic
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const categories = document.querySelectorAll('[data-category]');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const filterValue = this.getAttribute('data-filter');
+
+                    categories.forEach(category => {
+                        if (filterValue === 'all' || category.getAttribute('data-category') === filterValue) {
+                            category.style.display = 'block';
+                        } else {
+                            category.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Smooth Animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.animate-up, .animate-left, .animate-right').forEach((el) => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
