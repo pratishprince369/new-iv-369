@@ -53,7 +53,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="about-hero" style="padding-bottom: 20px; background: linear-gradient(rgba(11, 61, 46, 0.9), rgba(26, 107, 76, 0.95)), url('https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1920'); background-size: cover; background-position: center;">
+        <section class="about-hero" style="padding-bottom: 20px; background: linear-gradient(rgba(58, 50, 38, 0.9), rgba(200, 169, 110, 0.95)), url('https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1920'); background-size: cover; background-position: center;">
             <div class="container text-center">
                 <h1 class="product-title animate-up" style="color: white; margin-top: 40px;">IV Drip Therapy Menu</h1>
                 <p class="section-desc animate-up" style="color: rgba(255,255,255,0.9); margin-top: 20px;">Rehydrate, replenish, and recover with our specialized IV therapies delivered directly to you.</p>
@@ -207,7 +207,7 @@
                     <div class="product-card-single" id="revive-defense">
                         <img src="https://res.cloudinary.com/dpcidympa/image/upload/q_auto/f_auto/v1775948553/ivvv-3-removebg-preview_umoxbk.png" alt="Revive Defense">
                         <div class="card-content">
-                            <span class="badge" style="background:rgba(26,107,76,0.1); color:var(--primary);">IMMUNITY</span>
+                            <span class="badge" style="background:rgba(200,169,110,0.1); color:var(--primary);">IMMUNITY</span>
                             <h3 class="playfair-title">Revive Defense</h3>
                             <div class="price">$299</div>
                             <p style="color: var(--text-muted);">Strengthen your immune system and fight off illness with hospital-grade nutrients.</p>
@@ -345,6 +345,28 @@
                 </div>
             </div>
         </section>
++
++        <!-- Locations Section -->
++        <section id="locations" class="locations bg-white">
++            <div class="container grid-2">
++                <div class="locations-content">
++                    <span class="tagline-gold">Service Areas</span>
++                    <h2>New York City</h2>
++                    <p>Our fleet of nurses is on standby throughout the five boroughs. We bring the clinic to your doorstep, saving you travel time and stress.</p>
++                    <div class="locations-list">
++                        <div class="location-item"><i class="fas fa-location-dot"></i> Manhattan</div>
++                        <div class="location-item"><i class="fas fa-location-dot"></i> Brooklyn</div>
++                        <div class="location-item"><i class="fas fa-location-dot"></i> Queens</div>
++                        <div class="location-item"><i class="fas fa-location-dot"></i> The Bronx</div>
++                        <div class="location-item"><i class="fas fa-location-dot"></i> Staten Island</div>
++                    </div>
++                </div>
++                <div class="feature-image">
++                    <img src="assets/nurse_iv_treatment.png" alt="IV Nurse Treating Patient">
++                </div>
++            </div>
++        </section>
+
 
         <!-- FAQ Teaser -->
         <section class="container animate-up">
@@ -354,6 +376,53 @@
                 <a href="index.html#faq" class="btn btn-gold" style="background: white; color: var(--primary);">Read Our FAQs</a>
             </div>
         </section>
++
++        <!-- Contact Us Section -->
++        <section id="contact-us" class="contact-section section-padding">
++            <div class="container">
++                <div class="section-header text-center" style="margin-bottom: 60px;">
++                    <h2 class="playfair-title" style="font-size: 3.5rem; color: var(--primary);">Contact Us</h2>
++                    <p style="font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto;">Ready to feel better? Have questions? We're a message away.</p>
++                </div>
++
++                <div class="contact-grid">
++                    <div class="contact-card">
++                        <div class="contact-info-item">
++                            <div class="contact-icon">
++                                <i class="fas fa-phone"></i>
++                            </div>
++                            <h3>Give us a call</h3>
++                            <a href="tel:6467093698" class="contact-link">+1 (646) 709-3698</a>
++                        </div>
++
++                        <div class="contact-info-item">
++                            <div class="contact-icon">
++                                <i class="fas fa-envelope"></i>
++                            </div>
++                            <h3>Email us</h3>
++                            <a href="mailto:info@reviveivdrip.io" class="contact-link">info@reviveivdrip.io</a>
++                        </div>
++
++                        <div class="contact-cta">
++                            <a href="#" class="btn btn-gold w-100">BOOK APPOINTMENT</a>
++                        </div>
++                    </div>
++
++                    <div class="contact-map">
++                        <iframe 
++                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1713690000000!5m2!1sen!2sus" 
++                            width="100%" 
++                            height="100%" 
++                            style="border:0; border-radius: 20px;" 
++                            allowfullscreen="" 
++                            loading="lazy" 
++                            referrerpolicy="no-referrer-when-downgrade">
++                        </iframe>
++                    </div>
++                </div>
++            </div>
++        </section>
+
     </main>
 
     <!-- Footer -->
@@ -362,7 +431,7 @@
             <div class="footer-col brand">
                 <a href="index.html" class="logo">
                     <img src="assets/revive-iv-logo-logo.png" alt="Revive IV Hydration" style="filter: brightness(0) invert(1); height: 45px; width: auto;">
-                    <span style="color: white; font-weight: 700; font-size: 1.5rem; margin-left: 10px;">Revive IV Hydration</span>
+                    <span style="color: white; font-weight: 500; font-size: 1.5rem; margin-left: 10px;">Revive IV Hydration</span>
                 </a>
                 <p style="margin-top: 20px; opacity: 0.7;">Premium Revive IV Hydration and hydration services delivered to you. Licensed nurses, clinical excellence, on-demand wellness.</p>
                 <div class="social-links">
@@ -387,9 +456,9 @@
                 <h4>Contact Info</h4>
                 <ul class="contact-info">
                     <li><i class="fas fa-phone"></i> (646) 709-3698</li>
-                    <li><i class="fas fa-envelope"></i> hello@reviveiv.io</li>
-                    <li><i class="fas fa-location-dot"></i> NYC & Extended Metro Area</li>
-                </ul>
++                    <li><i class="fas fa-envelope"></i> hello@reviveiv.io</li>
++                    <li><i class="fas fa-location-dot"></i> New York City</li>
++                </ul>
             </div>
         </div>
         <div class="footer-bottom">
@@ -398,6 +467,75 @@
             </div>
         </div>
     </footer>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="step-indicator">
+                    <div class="step active" data-step="1">1</div>
+                    <div class="step" data-step="2">2</div>
+                </div>
+                
+                <h2 class="playfair-title" id="modalProductTitle" style="color: var(--primary); margin-bottom: 5px;">Book Your Treatment</h2>
+                <p class="modal-subtitle" style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 30px;">Follow the steps below to schedule your session.</p>
+
+                <form id="bookingForm">
+                    <!-- Step 1: Date & Time -->
+                    <div class="form-step active" id="step1">
+                        <div class="form-group">
+                            <label for="bookingDate">Select Date</label>
+                            <input type="date" id="bookingDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bookingTime">Select Timing</label>
+                            <select id="bookingTime" required>
+                                <option value="">Choose a time...</option>
+                                <option value="09:00 AM">09:00 AM</option>
+                                <option value="10:00 AM">10:00 AM</option>
+                                <option value="11:00 AM">11:00 AM</option>
+                                <option value="12:00 PM">12:00 PM</option>
+                                <option value="01:00 PM">01:00 PM</option>
+                                <option value="02:00 PM">02:00 PM</option>
+                                <option value="03:00 PM">03:00 PM</option>
+                                <option value="04:00 PM">04:00 PM</option>
+                                <option value="05:00 PM">05:00 PM</option>
+                                <option value="06:00 PM">06:00 PM</option>
+                                <option value="07:00 PM">07:00 PM</option>
+                                <option value="08:00 PM">08:00 PM</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-gold w-100 mt-4" id="nextToStep2">Next Step</button>
+                    </div>
+
+                    <!-- Step 2: Personal Details -->
+                    <div class="form-step" id="step2">
+                        <div class="form-group">
+                            <label for="userName">Full Name</label>
+                            <input type="text" id="userName" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="userPhone">Mobile Number</label>
+                            <input type="tel" id="userPhone" placeholder="(000) 000-0000" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="userEmail">Email Address</label>
+                            <input type="email" id="userEmail" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="userLocation">Service Location (Address)</label>
+                            <input type="text" id="userLocation" placeholder="Street Address, Borough" required>
+                        </div>
+                        <div style="display: flex; gap: 10px; margin-top: 25px;">
+                            <button type="button" class="btn btn-pill-outline" id="backToStep1" style="flex: 1;">Back</button>
+                            <button type="submit" class="btn btn-gold" style="flex: 2;">Confirm & Pay</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script>

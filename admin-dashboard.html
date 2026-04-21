@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Lead Dashboard | Revive IV Hydration</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+        
+        body { 
+            background: #f5f0e8; 
+            font-family: 'Outfit', sans-serif; 
+            min-height: 100vh; 
+            margin: 0;
+        }
+        
+        .admin-login { 
+            position: fixed; 
+            inset: 0; 
+            background: #f5f0e8; 
+            z-index: 2000; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+        }
+        
+        .login-card { 
+            background: white; 
+            padding: 50px; 
+            border-radius: 30px; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05); 
+            text-align: center; 
+            max-width: 400px; 
+            width: 90%; 
+        }
+        
+        .dashboard-container { 
+            display: none; 
+            padding: 40px; 
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .dashboard-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 40px; 
+        }
+        
+        .stats-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 20px; 
+            margin-bottom: 40px; 
+        }
+        
+        .stat-card { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03); 
+            text-align: center; 
+            border: 1px solid rgba(200, 169, 110, 0.1);
+        }
+        
+        .leads-table-container { 
+            background: white; 
+            border-radius: 25px; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.04); 
+            overflow: hidden; 
+            border: 1px solid rgba(200, 169, 110, 0.1);
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+        }
+        
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            min-width: 900px; 
+        }
+        
+        th { 
+            background: var(--primary); 
+            color: white; 
+            padding: 20px; 
+            text-align: left; 
+            font-size: 0.75rem; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+            font-weight: 700;
+        }
+        
+        td { 
+            padding: 20px; 
+            border-bottom: 1px solid #f8f8f8; 
+            font-size: 0.95rem; 
+            color: #444; 
+            vertical-align: top;
+        }
+        
+        tr:hover { 
+            background-color: rgba(200, 169, 110, 0.05); 
+        }
+
+        .badge-product {
+            background: rgba(200, 169, 110, 0.1);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            border-radius: 12px;
+            border: 2px solid #eee;
+            margin-bottom: 25px;
+            outline: none;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        input[type="password"]:focus {
+            border-color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            .dashboard-header { flex-direction: column; text-align: center; gap: 20px; }
+            .dashboard-container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="admin-login">
+        <div class="login-card">
+            <h2 class="playfair-title" style="margin-bottom: 15px; color: var(--primary);">Revive Admin</h2>
+            <p style="margin-bottom: 30px; color: #666; font-size: 0.95rem;">Enter your password to access leads.</p>
+            <input type="password" id="adminPass" placeholder="Password">
+            <button onclick="checkAdmin()" class="btn btn-gold w-100">Login to Dashboard</button>
+            <p id="errorMsg" style="color: #e53e3e; margin-top: 15px; display: none; font-size: 0.9rem;">Invalid password. Please try again.</p>
+        </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="dashboard-container">
+        <header class="dashboard-header">
+            <div>
+                <h1 class="playfair-title" style="font-size: 2.8rem; color: var(--primary); margin: 0;">Leads Center</h1>
+                <p style="color: var(--text-muted); margin-top: 5px;">Secure management of patient inquiries.</p>
+            </div>
+            <div style="display: flex; gap: 12px;">
+                <button onclick="exportCSV()" class="btn btn-pill-outline" style="font-size: 0.9rem;"><i class="fas fa-file-export"></i> Export CSV</button>
+                <button onclick="logout()" class="btn btn-gold" style="font-size: 0.9rem;">Logout</button>
+            </div>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <i class="fas fa-bullseye" style="color: var(--accent); font-size: 1.8rem; margin-bottom: 15px;"></i>
+                <h4 style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Total Leads</h4>
+                <h2 id="totalLeads" style="font-size: 2.5rem; margin: 0; color: var(--primary);">0</h2>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-bolt" style="color: var(--accent); font-size: 1.8rem; margin-bottom: 15px;"></i>
+                <h4 style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Today's Activity</h4>
+                <h2 id="todayLeads" style="font-size: 2.5rem; margin: 0; color: var(--primary);">0</h2>
+            </div>
+        </div>
+
+        <div class="leads-table-container">
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Inquiry Date</th>
+                            <th>Patient Information</th>
+                            <th>Treatment</th>
+                            <th>Location / Address</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leadsTableBody">
+                        <!-- Leads will be injected here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Password for Dashboard
+        const ADMIN_PASSWORD = "admin123"; 
+
+        function checkAdmin() {
+            const pass = document.getElementById('adminPass').value;
+            if(pass === ADMIN_PASSWORD) {
+                document.getElementById('loginScreen').style.display = 'none';
+                document.getElementById('dashboard').style.display = 'block';
+                loadLeads();
+            } else {
+                document.getElementById('errorMsg').style.display = 'block';
+            }
+        }
+
+        // Allow 'Enter' key for login
+        document.getElementById('adminPass').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') checkAdmin();
+        });
+
+        function loadLeads() {
+            const leads = JSON.parse(localStorage.getItem('reviveLeads') || '[]');
+            const tableBody = document.getElementById('leadsTableBody');
+            const totalLeadsEl = document.getElementById('totalLeads');
+            const todayLeadsEl = document.getElementById('todayLeads');
+            
+            totalLeadsEl.innerText = leads.length;
+            
+            // Count today's leads
+            const todayStr = new Date().toLocaleDateString();
+            const todayCount = leads.filter(l => l.submittedAt.includes(todayStr)).length;
+            todayLeadsEl.innerText = todayCount;
+
+            if(leads.length === 0) {
+                tableBody.innerHTML = '<tr><td colspan="5" style="text-align: center; padding: 100px; color: #999;">No patient inquiries found in the database.</td></tr>';
+                return;
+            }
+
+            tableBody.innerHTML = leads.map(lead => `
+                <tr>
+                    <td>
+                        <div style="font-weight: 700; color: var(--primary);">${lead.date}</div>
+                        <div style="font-size: 0.85rem; color: var(--text-muted);">${lead.time}</div>
+                    </td>
+                    <td>
+                        <div style="font-weight: 700; margin-bottom: 4px;">${lead.name}</div>
+                        <div style="font-size: 0.85rem; color: #666;"><i class="fas fa-phone" style="width: 15px;"></i> ${lead.phone}</div>
+                        <div style="font-size: 0.85rem; color: #666;"><i class="fas fa-envelope" style="width: 15px;"></i> ${lead.email}</div>
+                    </td>
+                    <td><span class="badge-product">${lead.product}</span></td>
+                    <td>
+                        <div style="font-size: 0.9rem; line-height: 1.4;">${lead.location}</div>
+                    </td>
+                    <td>
+                        <span style="color: #059669; font-weight: 700; font-size: 0.8rem; text-transform: uppercase;">
+                            <i class="fas fa-check-circle"></i> Confirmed
+                        </span>
+                    </td>
+                </tr>
+            `).reverse().join('');
+        }
+
+        function logout() {
+            location.reload();
+        }
+
+        function exportCSV() {
+            const leads = JSON.parse(localStorage.getItem('reviveLeads') || '[]');
+            if(leads.length === 0) return alert('No leads available to export.');
+
+            const headers = ["Inquiry Date", "Inquiry Time", "Patient Name", "Phone", "Email", "Product", "Location", "Timestamp"];
+            const csvRows = [headers.join(",")];
+
+            leads.forEach(l => {
+                const values = [
+                    l.date,
+                    l.time,
+                    `"${l.name}"`,
+                    `"${l.phone}"`,
+                    `"${l.email}"`,
+                    `"${l.product}"`,
+                    `"${l.location}"`,
+                    `"${l.submittedAt}"`
+                ];
+                csvRows.push(values.join(","));
+            });
+
+            const csvString = csvRows.join("\n");
+            const blob = new Blob([csvString], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.setAttribute('hidden', '');
+            a.setAttribute('href', url);
+            a.setAttribute('download', `revive_leads_${new Date().toISOString().split('T')[0]}.csv`);
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
+</body>
+</html>
