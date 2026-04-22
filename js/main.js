@@ -273,8 +273,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (url && (url.startsWith('http') || url === '#')) {
                 e.preventDefault();
                 // Find product title from parent card
-                const card = target.closest('.treatment-card, .product-card-single, .premium-shot-card');
-                const title = card ? card.querySelector('h3').innerText : 'Your Treatment';
+                const card = target.closest('.treatment-card, .product-card-single, .premium-shot-card, .product-container, .product-details');
+                const title = card ? card.querySelector('h3, h2').innerText : 'Your Treatment';
                 openBookingModal(url !== '#' ? url : 'https://square.link/u/V4TofUel', title); 
             }
         }

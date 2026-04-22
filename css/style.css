@@ -1899,3 +1899,28 @@ footer { background: var(--black); color: var(--white); padding: 80px 0 30px; }
     box-shadow: 0 0 0 4px rgba(200, 169, 110, 0.1);
 }
 
+/* Instagram Section */
+.instagram-section {
+    padding: 100px 0;
+    background: linear-gradient(rgba(245, 240, 232, 0.85), rgba(245, 240, 232, 0.85)), url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1920');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-top: 1px solid rgba(200, 169, 110, 0.1);
+}
+
+.instagram-main-icon {
+    font-size: 4rem;
+    color: var(--accent);
+    margin-bottom: 25px;
+    display: block;
+}
+
+.instagram-content p {
+    max-width: 600px;
+    margin: 0 auto 35px;
+    font-size: 1.15rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+

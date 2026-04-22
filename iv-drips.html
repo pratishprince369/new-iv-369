@@ -435,9 +435,9 @@
                 </a>
                 <p style="margin-top: 20px; opacity: 0.7;">Premium Revive IV Hydration and hydration services delivered to you. Licensed nurses, clinical excellence, on-demand wellness.</p>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61570785538852" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/reviveivdrip_/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@revive.iv.drip?_r=1&_t=ZS-95Y6xC3RF0z" target="_blank"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
             
@@ -547,18 +547,12 @@
         </div>
     </div>
 
-    <!-- Scripts -->
+    <!-- Global Logic -->
+    <script src="js/main.js"></script>
+
+    <!-- Page Specific Filtering Logic -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Mobile Menu
-            const mobileBtn = document.getElementById('mobile-menu-btn');
-            const mainNav = document.getElementById('main-nav');
-            if(mobileBtn) {
-                mobileBtn.addEventListener('click', () => {
-                    mainNav.classList.toggle('active');
-                });
-            }
-
             // Filtering Logic
             const filterBtns = document.querySelectorAll('.filter-btn');
             const categories = document.querySelectorAll('[data-category]');
@@ -578,19 +572,6 @@
                         }
                     });
                 });
-            });
-
-            // Smooth Animations
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.animate-up, .animate-left, .animate-right').forEach((el) => {
-                observer.observe(el);
             });
         });
     </script>
